@@ -12,3 +12,6 @@
     AssertThat(value.getContentIfNotHandled()?.status).isEqualTo(Status.Error) (in Test)
     
 **HiltExt.kt** - It is not possible to use launchFragmentInContainer from the androidx.fragment:fragment-testing library with Hilt, because it relies on an activity that is not annotated with @AndroidEntryPoint. Use this class to run Fragment with Hilt for testing
+
+    USAGE:  
+    launchFragmentInHiltContainer<Fragment> { }
