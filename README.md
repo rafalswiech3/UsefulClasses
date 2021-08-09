@@ -10,3 +10,5 @@ Event.kt - An event wrapper for data that is exposed via a LiveData that represe
     liveDataStatus = LiveData<Event<Resource<Class>>> (in ViewModel)
     val value = viewModel.liveDataStatus.getOrAwaitValue() (in Test)
     AssertThat(value.getContentIfNotHandled()?.status).isEqualTo(Status.Error) (in Test)
+    
+HiltExt.kt - It is not possible to use launchFragmentInContainer from the androidx.fragment:fragment-testing library with Hilt, because it relies on an activity that is not annotated with @AndroidEntryPoint. Use this class to run Fragment with Hilt for testing
